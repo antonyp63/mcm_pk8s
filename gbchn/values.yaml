@@ -2,7 +2,7 @@ redismaster:
   deployment:
     repository: gcr.io/kubernetes-e2e-test-images/redis
     tag: "1.0"
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
   service:
     type: ClusterIP
 
@@ -10,7 +10,7 @@ frontend:
   deployment:
     repository: gcr.io/google-samples/gb-frontend
     tag: v6
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
   service:
     type: NodePort
 
